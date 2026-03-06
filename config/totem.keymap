@@ -136,7 +136,7 @@ label= "SYM"                               ;
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR     &kp SQT     &kp DQT
                 &kp PIPE    &kp MINUS    &kp SQT     &kp DQT     &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O)
-    &trans      &kp BSLS    &kp UNDS    &kp LCBR    &kp LBRC    &kp EQ          &kp GRAVE   &kp RBRC    &kp RCBR    &kp C_NEXT  &kp BSLH   &trans
+    &trans      &kp BSLH    &kp UNDER   &kp LCBR    &kp LBRC    &kp EQUAL       &kp GRAVE   &kp RBRC    &kp RCBR    &kp C_NEXT  &kp BSLH   &trans
                                         &kp RPRN    &kp LPRN    &trans         &trans      &kp C_PP    &trans
             >;
         };
