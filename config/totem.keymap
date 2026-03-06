@@ -32,7 +32,7 @@
 #define QUICK_TAP_MS 175
 
 // smart-layer config
-&caps_word {  
+&caps_word {
     // /delete-property/ ignore-modifiers; // mods deactivate, requires PR #1451
     /delete-property/ ignore-numbers;
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
@@ -50,7 +50,7 @@
 };
 
 // default layer-tap config
-&lt {  
+&lt {
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -85,13 +85,13 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-// tap: comma | shift + tap: semicolon 
+// tap: comma | shift + tap: semicolon
 ZMK_BEHAVIOR(comma_morph, mod_morph,
     bindings = <&kp COMMA>, <&kp SEMICOLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-// tap: dot | shift + tap: colon 
+// tap: dot | shift + tap: colon
 ZMK_BEHAVIOR(dot_morph, mod_morph,
     bindings = <&kp DOT>, <&kp COLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -103,32 +103,54 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         compatible = "zmk,keymap";
         default_layer { // ColemakDHm
             bindings = <
-            &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
+            &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P
             &hml LCTRL A  &hml LALT S   &hml LGUI D      &hml LSHFT F     &kp G              &kp H         &hmr RSHFT J       &hmr RGUI K      &hmr LALT L   &hmr RCTRL SEMI
 &kp TAB    &kp Z         &kp X         &hml MEH C       &hml HYP V       &kp B              &kp N         &hmr HYP M         &hmr_meh MEH 0   &dot_morph    &qexcl        &kp TAB
-                                        &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT          &kp RET       &lt NUM BSPC       &lt FUN DEL
+                                        &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT          &lt SYM RET       &lt NUM BSPC       &lt FUN DEL
             >;
         };
-        nav_layer { 
+        nav_layer {
             bindings = <
-            ___          ___          ___             ___             ___                ___           &kp HOME          &kp UP          &kp END       &kp PAGE_UP 
+            ___          ___          ___             ___             ___                ___           &kp HOME          &kp UP          &kp END       &kp PAGE_UP
             &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT       ___                ___           &kp LEFT          &kp DOWN        &kp RIGHT     &kp PAGE_DOWN
     BACK    ___           ___          &kp MEH         &kp HYP         ___                ___          &kp TILDE         ___             &kp FSLH      ___             FWD
                                        ___            ___             ___                &kp RET       &kp BSPC          &kp DEL
             >;
-        }; 
+        };
         num_layer {
             bindings = <
-            &kp PLUS     &kp N7       &kp N8          &kp  N9         &kp STAR           ___           ___               ___             ___           ___ 
+            &kp PLUS     &kp N7       &kp N8          &kp  N9         &kp STAR           ___           ___               ___             ___           ___
             &kp N0       &kp N4       &kp N5          &kp  N6         &kp EQUAL          ___           &kp LSHFT         &kp LGUI        &kp LALT      &kp LCTRL
   &kp LPAR  &kp MINUS    &kp N1       &kp N2          &kp  N3         &kp FSLH           ___           &kp HYP           &kp MEH         ___           ___            &kp RPAR
                                       ___             &kp  DOT        &kp SEMI           ___           ___               ___
             >;
         };
+        sym_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "SYM"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     *     ┃     '     ┃     "     ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃     |     ┃     -     ┃     '     ┃     "     ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃     \     ┃     _     ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃     (     ┃     )     ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+             bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp ASTR     &kp SQT     &kp DQT
+                &kp PIPE    &kp PMNS    &kp SQT     &kp DQT     &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O)
+    &trans      &kp BSLS    &kp UNDS    &kp LCBR    &kp LBRC    &kp EQ          &kp BKT     &kp RBRC    &kp RCBR    &kp C_NEXT  &kp BSLH   &trans
+                                        &kp RPRN    &kp LPRN    &trans         &trans      &kp C_PP    &trans
+            >;
+        };
         fun_layer {
             bindings = <
             &kp F12      &kp F7       &kp F8          &kp F9          ___                ___           ___               ___             ___           ___
-            &kp F11      &kp F4       &kp F5          &kp F6          ___                ___           &kp LSHFT         &kp LGUI        &kp LALT      &kp LCTRL 
+            &kp F11      &kp F4       &kp F5          &kp F6          ___                ___           &kp LSHFT         &kp LGUI        &kp LALT      &kp LCTRL
     ___     &kp F10      &kp F1       &kp F2          &kp F3          ___                ___           &kp HYP           &kp MEH         ___           ___             ___
                                       ___             ___             ___                ___           ___               ___
             >;
@@ -136,14 +158,14 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         util_layer {
             bindings = <
             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_CLR      ___                ___           ___               &kp C_VOL_UP    ___           ___
-            &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT      ___                ___           ___                &kp C_VOL_DN    ___           ___ 
+            &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT      ___                ___           ___                &kp C_VOL_DN    ___           ___
     ___     ___          ___          ___             &kp HYP        ___                ___           ___               ___             ___           ___             ___
                                       ___             ___             ___                ___           ___               &kp C_MUTE
             >;
-        };  
+        };
     };
 };
-    
+
 /* --------------------------------- combos --------------------------------- */
 /*
    ╭────────────────────┬────────────────────╮     ╭─────────────────────┬─────────────────────╮
