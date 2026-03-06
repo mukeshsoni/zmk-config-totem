@@ -117,14 +117,6 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
                                        ___            ___             ___                &kp RET       &kp BSPC          &kp DEL
             >;
         };
-        num_layer {
-            bindings = <
-            &kp PLUS     &kp N7       &kp N8          &kp  N9         &kp STAR           ___           ___               ___             ___           ___
-            &kp N0       &kp N4       &kp N5          &kp  N6         &kp EQUAL          ___           &kp LSHFT         &kp LGUI        &kp LALT      &kp LCTRL
-  &kp LPAR  &kp MINUS    &kp N1       &kp N2          &kp  N3         &kp FSLH           ___           &kp HYP           &kp MEH         ___           ___            &kp RPAR
-                                      ___             &kp  DOT        &kp SEMI           ___           ___               ___
-            >;
-        };
         sym_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "SYM"                               ;
@@ -138,13 +130,21 @@ label= "SYM"                               ;
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃     (     ┃     )     ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-             bindings = <
+            bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp ASTR     &kp SQT     &kp DQT
                 &kp PIPE    &kp PMNS    &kp SQT     &kp DQT     &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O)
     &trans      &kp BSLS    &kp UNDS    &kp LCBR    &kp LBRC    &kp EQ          &kp BKT     &kp RBRC    &kp RCBR    &kp C_NEXT  &kp BSLH   &trans
                                         &kp RPRN    &kp LPRN    &trans         &trans      &kp C_PP    &trans
+            >;
+        };
+        num_layer {
+            bindings = <
+            &kp PLUS     &kp N7       &kp N8          &kp  N9         &kp STAR           ___           ___               ___             ___           ___
+            &kp N0       &kp N4       &kp N5          &kp  N6         &kp EQUAL          ___           &kp LSHFT         &kp LGUI        &kp LALT      &kp LCTRL
+  &kp LPAR  &kp MINUS    &kp N1       &kp N2          &kp  N3         &kp FSLH           ___           &kp HYP           &kp MEH         ___           ___            &kp RPAR
+                                      ___             &kp  DOT        &kp SEMI           ___           ___               ___
             >;
         };
         fun_layer {
