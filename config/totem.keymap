@@ -177,8 +177,8 @@ label= "SYM"                               ;
         };
         util_layer {
             bindings = <
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_CLR      &sleep_hyper_z     &kp HYP       ___               &kp C_VOL_UP    ___           ___
-            &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT      ___                ___           ___                &kp C_VOL_DN    ___           ___
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &bt BT_CLR      &sleep_hyper_z     &kp HYP      &kp C_BRI_UP      &kp C_VOL_UP    ___           ___
+            &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT      ___                ___           &kp C_BRI_UP      &kp C_VOL_DN    ___           ___
     ___     ___          ___          ___             &kp HYP        ___                ___           ___               ___             ___           ___             ___
                                       ___             ___             ___                ___           ___               &kp C_MUTE
             >;
