@@ -12,3 +12,23 @@ Caps word is activated by tapping both home row index finger keys, and as I find
 Having all the mods in the home row makes it pretty easy to mash a bunch of them to get Hyper (Shift + Command + Option + Control) or Meh (Shift + Option + Control), but --- just because I can --- I have the index and middle finger keys on the bottom row as Hyper and Meh mod taps too. That makes it very easy to create useful keyboard shortcuts for global OS use without any fear of clashes.
 
 Finally, the extra outer pinky key is used for previous/next tab, back/forward in navigation history, and parens in the number layer. I tend not to hit those keys accidentally as they are way out there, but it is useful to have dedicated and spatially organised keys for common navigation stuff.
+
+## Generated ASCII layout reference
+
+The printable ASCII reference in `totem-layout-reference.txt` is auto-generated from:
+
+- `config/totem.keymap`
+- `config/combos.dtsi`
+
+Generation script:
+
+- `scripts/generate_totem_layout_reference.py`
+
+If you use pre-commit, install and enable hooks once:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Then the reference file is automatically regenerated before each commit whenever either config file changes.
